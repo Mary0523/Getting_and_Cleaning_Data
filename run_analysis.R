@@ -47,6 +47,7 @@ new_colname <- gsub("-mean-", "_Mean_", new_colname)
 new_colname <- gsub("-std-", "_StandardDeviation_", new_colname)
 new_colname <- gsub("-", "_", new_colname)
 new_colname <- gsub("[(][)]", "", new_colname)
+names(new_colname)<-gsub("BodyBody", "Body", names(new_colname))
 colnames(all_subset2) <- new_colname
 
 #5. from the data set in step 4, create a second, independent tidy data set 
